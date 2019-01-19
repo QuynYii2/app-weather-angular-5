@@ -1,0 +1,33 @@
+body{
+ height: 100%;
+}
+
+agm-map {
+    height: 500px;
+	width: 100%;
+}
+
+widget__temperature {
+    font: 600 30px/1.4 Oswald,Arial,sans-serif;
+}
+
+.weather-widget__img {
+    font-size: 17px;
+}
+.temp{
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 12px;
+}
+#cover {
+  background: #222 url('https://static2.yan.vn/YanNews/2167221/201704/20170421-015258-1_600x338.jpg') center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#cover-caption {
+  width: 100%;
+}

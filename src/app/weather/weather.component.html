@@ -1,0 +1,43 @@
+<!--div class="search_weather">	
+	<input placeholder="Enter city name" [(ngModel)]="txtCityName">
+	<button (click)="getWeather();" type="submit">Get weather</button>
+</div-->
+
+
+
+<div class="container">
+	<div class="row">
+		<h1 style="text-align: center">{{ title }}</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 offset-sm-3 text-center">
+			<div class="info-form">
+				<div class="form-group">
+					<input placeholder="Enter city name" [(ngModel)]="txtCityName">
+				</div>
+				<button type="submit" (click)="getWeather();" class="btn btn-success ">Get Weather</button>
+			</div>
+		</div>
+	<div>
+</div>
+
+<!--h2 *ngIf="errorMessage">{{ errorMessage }} </h2-->
+
+<div class="container" *ngIf="cityName" >
+	<div class="row" style="border: 1px solid #dfe1e5; border-radius: 8px;">
+		<div class="col-md-4">
+			<h3 style="text: center;"> Weather in {{ cityName }} , {{ countrys }} </h3>
+			<h3 class="weather-widget__temperature">
+				<img class="weather-widget__img"  src="http://openweathermap.org/img/w/{{ icons }}.png" alt="Weather Ha Noi , VN" width="50" height="50">
+				<span class="temp">{{ temp }} °C </span><br> 
+				<span>Humidity: {{ humiditys }} % </span> <br>
+				<span>Win: {{ wins }} km/h </span> 
+			</h3>
+		</div>
+		<div class="col-md-8">
+			<agm-map [latitude]="lat" [longitude]="lng">
+				<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+			</agm-map>
+		</div>
+	</div>
+</div>
