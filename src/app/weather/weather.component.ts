@@ -17,7 +17,7 @@ import { TestScheduler } from 'rxjs/testing';
 })
 export class WeatherComponent implements OnInit {
 	public cityname;
-	title = "Get Weather";
+	title = "App Weather Angular 5";
     txtCityName = '';
 	cityName ='';
 	temp: any;
