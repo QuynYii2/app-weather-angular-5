@@ -13,7 +13,7 @@
 		<div class="col-sm-6 offset-sm-3 text-center">
 			<div class="info-form">
 				<div class="form-group">
-					<input placeholder="Enter city name" [(ngModel)]="txtCityName">
+					<input (keyup)="onKey(getWeather())" placeholder="Enter city name" [(ngModel)]="txtCityName">
 				</div>
 				<button type="submit" (click)="getWeather();" class="btn btn-success ">Get Weather</button>
 			</div>
